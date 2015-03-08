@@ -1,0 +1,72 @@
+﻿<SettingsFlyout
+    x:Class="UPravda.SettingFlyout"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UPravda"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="Налаштування"
+    d:DesignWidth="346" HeaderBackground="{StaticResource GeneralColor}">
+
+    <!-- Этот элемент StackPanel является корневой панелью для вертикальной компоновки разделов содержимого -->
+    <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
+
+        <!-- Элементы StackPanel ниже определяют отдельные разделы содержимого -->
+
+        <!-- Раздел содержимого 1-->
+        <StackPanel Style="{StaticResource SettingsFlyoutSectionStyle}">
+
+            <StackPanel Margin="0,0,0,25">
+                <!-- Заголовок раздела 1 -->
+                <TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="Мова додатку" />
+
+                <!-- Основная часть раздела 1 -->
+                <TextBlock Style="{StaticResource BodyTextBlockStyle}" Margin="0,0,0,12" TextWrapping="Wrap">
+                    <TextBlock.Text>
+                        Виберіть мову, яку хочете бачити у меню та новинах
+                    </TextBlock.Text>
+                </TextBlock>
+                <ComboBox IsEnabled="True" x:Name="LanguageComboBox" SelectionChanged="LanguageComboBox_SelectionChanged">
+                    <ComboBox.Items>
+                        <ComboBoxItem>Українська</ComboBoxItem>
+                        <ComboBoxItem>Російська</ComboBoxItem>
+                    </ComboBox.Items>
+                </ComboBox>
+            </StackPanel>
+
+            <StackPanel Margin="0,0,0,25">
+                <!-- Заголовок раздела 1 -->
+                <TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="Тема" />
+
+                <!-- Основная часть раздела 1 -->
+                <TextBlock Style="{StaticResource BodyTextBlockStyle}" Margin="0,0,0,12" TextWrapping="Wrap">
+                    <TextBlock.Text>
+                        Виберіть тему, яку хочете бачити на головній сторінці
+                    </TextBlock.Text>
+                </TextBlock>
+                <ComboBox x:Name="AppThemeComboBox" IsEnabled="True" SelectionChanged="AppThemeComboBox_SelectionChanged">
+                    <ComboBox.Items>
+                        <ComboBoxItem>Світла</ComboBoxItem>
+                        <ComboBoxItem>Темна</ComboBoxItem>
+                    </ComboBox.Items>
+                </ComboBox>
+                <TextBlock Style="{StaticResource BodyTextBlockStyle}" Margin="0,0,0,12" TextWrapping="Wrap">
+                    <TextBlock.Text>
+                        Виберіть тему, яку хочете бачити на сторінці новини
+                    </TextBlock.Text>
+                </TextBlock>
+                <ComboBox x:Name="NewsItemPageThemeComboBox" IsEnabled="True" SelectionChanged="NewsItemPageThemeComboBox_SelectionChanged">
+                    <ComboBox.Items>
+                        <ComboBoxItem>Світла</ComboBoxItem>
+                        <ComboBoxItem>Темна</ComboBoxItem>
+                    </ComboBox.Items>
+                </ComboBox>
+            </StackPanel>
+
+        </StackPanel>
+
+        <!-- Определите ниже требуемые дополнительные разделы содержимого -->
+
+    </StackPanel>
+</SettingsFlyout>

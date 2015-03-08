@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>486a4368-0c5b-4342-afc4-7cdfea7e6fa2</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>UPravda</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="$(MSBuildThisFileDirectory)App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)DataSources\ArticlesDataSource.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataSources\ColumnsDataSource.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataSources\IDataSource.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataSources\MainDataSource.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataSources\NewsDataSource.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataSources\PhotoDataSource.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataSources\VideoDataSource.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\Converters\HighlighterValueToColorConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\Converters\HighlighterValueToFontWeight.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\Converters\NewsCountToVisibility.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\Converters\SectionTitleToButtonContentConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\ExpandButtonHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\OfflineHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\SettingHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\TemplateSelectorPhoto.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\TemplateSelectorVideo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\VariableGridView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\INewsItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\News.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\UndefElements.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\TextNewsViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\ViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\ViewModelLocator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Images\thumb.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Images\VideoThumb170.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Images\VideoThumb350.png" />
+    <Content Include="$(MSBuildThisFileDirectory)SampleData\xml\articles.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)SampleData\xml\columns.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)SampleData\xml\news.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)SampleData\xml\photos.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)SampleData\xml\videos.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PRIResource Include="$(MSBuildThisFileDirectory)Strings\ru-ru\Resources.resw" />
+    <PRIResource Include="$(MSBuildThisFileDirectory)Strings\uk-ua\Resources.resw" />
+  </ItemGroup>
+</Project>
